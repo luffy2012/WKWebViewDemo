@@ -156,7 +156,7 @@
 }
 //页面加载完成之后调用
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    
+    NSLog(@"title:%@",webView.title);
 }
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation
@@ -174,6 +174,7 @@
     }]];
     [self presentViewController:alert animated:YES completion:nil];
     NSLog(@"alert message:%@",message);
+    
 }
 
 //confirm 确认框
